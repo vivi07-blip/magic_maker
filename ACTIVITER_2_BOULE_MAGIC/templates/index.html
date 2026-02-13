@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Boule Magique</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic+Guides&family=Playwrite+NZ+Basic:wght@100..400&display=swap" rel="stylesheet">
+    <style>
+        .playwrite-nz-basic-guides-regular {
+            font-family: "Playwrite NZ Basic Guides", cursive;
+            font-weight: 400;
+           font-style: normal;
+        }
+
+    </style>
+</head>
+
+<body class="bg-orange-200 flex items-center justify-center playwrite-nz-basic-guides-regular">
+
+    <section class = "max-w-[1000px] gap-6 rounded-xl shadow-lg p-10 bg-orange-100 my-50" >
+
+    <header>
+    
+        <div class="flex items-center">
+        
+            <div class="w-32">
+            
+                 <img src="..\static\boule de cristal.jpg">
+                
+            </div>
+        
+
+        <h1 class="text-2xl text-center font-bold text-orange-400"> Super Boule Magique </h1>
+        </div>
+    </header>
+
+    <main class="grid grid-cols-2 gap-6">
+        <div class="w-80">
+            <img class="rounded-lg" src="..\static\voyante.webp">
+        </div>
+
+        <div>
+            <div>
+                <h2 class="text-2xl text-center font-bold text-orange-300">Introduction</h2>
+                <ul class="list-decimal list-inside">
+                    <li>Ecris ta question</li>
+                    <li>Valide avec le bouton</li>
+                    <li>Decouvre ton futur</li>
+                </ul>
+            </div>
+            <div>
+                <form method="POST" class="pt-8 text-center">
+                    <label> Question </label>
+                    <input name="question" type="text" class = " border border-gray-300 rounded-lg px4 w-full ">
+                    <button type="submit" class="mt-4 w-full py-3 bg-gradient-to-r from-orange-400 to-orange-500 rounded-lg hover:from-orange-300 text-white"></button>
+                </form>
+            </div>
+            <div>
+                <h2>introduction</h2>
+            </div>
+        </div>
+    </main>
+
+    <footer class="flex justify-center gap-6">
+        <div class="border-2 p-6 border-orange-500 border-dashed rounded-lg text-center">
+        {% if prediction %}
+            <p class="text-lg text-orange-500">
+                {{prediction}}
+            </p>
+        {% else %}
+            <p class="text-lg text-gray-500">
+                Ton future t'attend
+            </p>
+        {% endif %}
+        </div>
+    </footer>
+    </section>
+
+</body>
+</html>
